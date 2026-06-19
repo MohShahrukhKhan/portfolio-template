@@ -64,6 +64,14 @@ cd frontend && npm run dev
 
 Open **http://localhost:5173**
 
+### Stop Services
+
+```bash
+kill $(lsof -ti :5173) 2>/dev/null   # Stop frontend
+kill $(lsof -ti :8001) 2>/dev/null   # Stop backend
+kill $(pgrep mongod) 2>/dev/null     # Stop MongoDB
+```
+
 ---
 
 ## Customize
